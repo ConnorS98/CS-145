@@ -14,10 +14,10 @@ public class Lab05 {
 
 		System.out.println();
 
-		// System.out.println("Task01");
-		// longestName(console, 5);
-		//
-		// System.out.println();
+		 System.out.println("Task01");
+		 longestName(console, 6);
+		
+		 System.out.println();
 
 		System.out.println("Task02");
 		wordCount("hello");
@@ -25,26 +25,36 @@ public class Lab05 {
 		wordCount("  this string  has  wide  spaces  ");
 		wordCount(" ");
 
-		// System.out.println();
-		//
-		// System.out.println("Task03");
-		// printLetters(console);
-		//
-		// System.out.println();
+		 System.out.println();
+		
+		 System.out.println("Task03");
+		 printLetters(console);
+		
+		 System.out.println();
+		 System.out.println();
 
-		// System.out.println("Task04");
-		// quadrant(console);
+		 System.out.println("Task04");
+		 quadrant(console);
 
-		// System.out.println();
+		 System.out.println();
 
-		// System.out.println("Task05");
-		// isAllVowels("jerry");
+		 System.out.println("Task05");
+		 isAllVowels("jerry");
+		 isAllVowels("aeiou");
+		 isAllVowels("aei");
+		 isAllVowels("");
+		 
 
-		// System.out.println();
+		 System.out.println();
 
-		// askForWords(console);
+		 askForWords(console);
 	}
-
+/**
+ * this method figures a persons salary
+ * @param salary how much they make
+ * @param hours  how much they worked
+ * @return the amount the are to be paied
+ */
 	public static double pay(double salary, int hours) {
 
 		double money = 0;
@@ -60,7 +70,11 @@ public class Lab05 {
 		}
 		return money;
 	}
-
+/**
+ * this method figures out the person a longest name
+ * @param console  the users input of names
+ * @param n  the amount of names to be entered
+ */
 	public static void longestName(Scanner console, int n) {
 		int oldLength = 0;
 		String max = "";
@@ -86,7 +100,11 @@ public class Lab05 {
 			System.out.println();
 		}
 	}
-
+/**
+ * this method counts words in the string
+ * @param word  the users choice of words
+ * @return  the amount of words in the string
+ */
 	public static int wordCount(String word) {
 		int count = 0;
 		
@@ -108,7 +126,11 @@ public class Lab05 {
 	
 
 	
-
+/**
+ * this method puts a comma between each letter
+ * @param console  input of word form user
+ * @return	the user input with commas in between
+ */
 	public static String printLetters(Scanner console) {
 	
 	 
@@ -124,7 +146,11 @@ public class Lab05 {
 	
 		return s;
 	}
-
+/**
+ * this method tells the quadrent of a point 
+ * @param console    user inputs a point
+ * @return		the quadrent the point is in
+ */
 	public static int quadrant(Scanner console) {
 		System.out.print("Coordinate?");
 		double jj = console.nextDouble();
@@ -145,35 +171,46 @@ public class Lab05 {
 		
 		return num;
 	}
-
+/**
+ * this method accpets words that are only vowels
+ * @param word	the input form the user
+ * @return  true or false until only vowels are in the input
+ */
 	public static boolean isAllVowels(String word) {
 		
-		String a = "a";
-		String e = "e";
-		String i = "i";
-		String o = "o";
-		String u = "u";
+		char a = 'a';
+		char e = 'e';
+		char i = 'i';
+		char o = 'o';
+		char u = 'u';
 		
-		
-		if (word.contains(a) && word.contains(e) && word.contains(i) && word.contains(o) && word.contains(u)) {
-			return true;
-		}else if (word.isEmpty()){
+		if (word.isEmpty()) {
 			return true;
 		}
-		return false;
 		
+		for(int j = 0; j < word.length(); j++) {
+			
+			if ((word.charAt(j) != a) && (word.charAt(j) != e) && ( word.charAt(j) != i) && (word.charAt(j) != o) && (word.charAt(j) != u)) {
+				return false;
+ 			} 
+		}
+		return true;
 	}
 
 	public static void askForWords(Scanner console) {
 	
 		System.out.print("Enter a word: ");
 		String word = console.next();
-		while(!isAllVowels(word)) {
+		String lWord = word.toLowerCase();
+		while(!isAllVowels(lWord)) {
+			System.out.println();
 			System.out.print("Enter a word: ");
 			word = console.next();
+			lWord = word.toLowerCase();
 		}
 		
 		System.out.println("Finally all vowels, we are done.");
 	}
+	
 
 }
