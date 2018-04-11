@@ -1,5 +1,12 @@
 package lab05;
 
+/**
+ * Connor Huffman
+ * Date 3/8/2018
+ * Lab05
+ * reveiw for exam using ifs and loops and scanners
+ */
+
 import java.util.*;
 
 public class Lab05 {
@@ -8,46 +15,46 @@ public class Lab05 {
 
 		Scanner console = new Scanner(System.in);
 
-		System.out.println("Task00");
-		pay(5.50, 6);
-		pay(4.00, 11);
-
-		System.out.println();
-
-		 System.out.println("Task01");
-		 longestName(console, 6);
-		
-		 System.out.println();
-
-		System.out.println("Task02");
-		wordCount("hello");
-		wordCount("how are you?");
-		wordCount("  this string  has  wide  spaces  ");
-		wordCount(" ");
-
-		 System.out.println();
-		
-		 System.out.println("Task03");
-		 printLetters(console);
-		
-		 System.out.println();
-		 System.out.println();
-
+//		System.out.println("Task00");
+//		pay(5.50, 6);
+//		pay(4.00, 11);
+//
+//		System.out.println();
+//
+//		 System.out.println("Task01");
+//		 longestName(console, 6);
+//		
+//		 System.out.println();
+//
+//		System.out.println("Task02");
+//		wordCount("hello");
+//		wordCount("how are you?");
+//		wordCount("  this string  has  wide  spaces  ");
+//		wordCount(" ");
+//
+//		 System.out.println();
+//		
+//		 System.out.println("Task03");
+//		 printLetters(console);
+//		
+//		 System.out.println();
+//		 System.out.println();
+//
 		 System.out.println("Task04");
 		 quadrant(console);
-
-		 System.out.println();
-
-		 System.out.println("Task05");
-		 isAllVowels("jerry");
-		 isAllVowels("aeiou");
-		 isAllVowels("aei");
-		 isAllVowels("");
-		 
-
-		 System.out.println();
-
-		 askForWords(console);
+//
+//		 System.out.println();
+//
+//		 System.out.println("Task05");
+//		 isAllVowels("jerry");
+//		 isAllVowels("aeiou");
+//		 isAllVowels("aei");
+//		 isAllVowels("");
+//		 
+//
+//		 System.out.println();
+//
+//		 askForWords(console);
 	}
 /**
  * this method figures a persons salary
@@ -122,9 +129,6 @@ public class Lab05 {
 		System.out.println(count);
 		return count;
 	}
-
-	
-
 	
 /**
  * this method puts a comma between each letter
@@ -196,7 +200,10 @@ public class Lab05 {
 		}
 		return true;
 	}
-
+/**
+ * this method returns the final word when it is all vowels
+ * @param console the input form the user
+ */
 	public static void askForWords(Scanner console) {
 	
 		System.out.print("Enter a word: ");
